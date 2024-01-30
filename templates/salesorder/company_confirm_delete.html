@@ -1,0 +1,17 @@
+<!-- company_confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Delete</title>
+</head>
+<body>
+    <h1>Confirm Delete</h1>
+    <p>Are you sure you want to delete "{{ company.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="confirm_delete" value="yes">  <!-- Hidden field to confirm deletion -->
+        <button type="submit">Yes, Delete</button>
+        <a href="{% url 'company_list' %}">Cancel</a>
+    </form>
+</body>
+</html>

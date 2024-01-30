@@ -1,0 +1,17 @@
+<!-- sales_order_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Order List</title>
+</head>
+<body>
+    <h1>Sales Order List</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.id }} - {{ order.customer }} - Total: ${{ order.total_amount }}</li>
+            <!-- Add additional order details here -->
+        {% endfor %}
+    </ul>
+    <a href="{% url 'sales_order_create' %}">Create New Sales Order</a>
+</body>
+</html>

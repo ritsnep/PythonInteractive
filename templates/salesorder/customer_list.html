@@ -1,0 +1,18 @@
+<!-- customer_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer List</title>
+</head>
+<body>
+    <h1>Customer List</h1>
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer.name }} <a href="{% url 'customer_edit' pk=customer.pk %}">Edit</a></li>
+            
+            <!-- Add additional customer details here -->
+        {% endfor %}
+    </ul>
+    <a href="{% url 'customer_create' %}">Create New Customer</a>
+</body>
+</html>

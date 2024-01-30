@@ -1,0 +1,24 @@
+<!-- company_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company List</title>
+</head>
+<body>
+    <h1>Company List</h1>
+    <ul>
+        {% for company in companies %}
+        <li>
+            {{ company.name }}
+            <a href="{% url 'company_edit' pk=company.pk %}">Edit</a>
+            <form action="{% url 'company_delete' pk=company.pk %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        <!-- Add additional company details here -->
+    {% endfor %}
+    </ul>
+    <a href="{% url 'company_create' %}">Create New Company</a>
+</body>
+</html>

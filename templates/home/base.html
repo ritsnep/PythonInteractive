@@ -33,12 +33,20 @@
           <li class="nav-item">
             <a class="nav-link {% block blogactive %} {% endblock %}" href="/blog">Blogs</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {% block registeractive %} {% endblock %}" href="/register">Register</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Options
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">logout</a></li>
+              <li><a class="dropdown-item" href="{% url 'login' %}">login</a></li>
+              <li><a class="dropdown-item" href="/companies">Company</a></li>
+              <li><a class="dropdown-item" href="/customers">Customers</a></li>
+              <li><a class="dropdown-item" href="/products">Products</a></li>
+              <li><a class="dropdown-item" href="/sales_orders">Order</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li>
                 <hr class="dropdown-divider">

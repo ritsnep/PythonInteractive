@@ -1,0 +1,28 @@
+<!-- sales_order_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Sales Order</title>
+</head>
+<body>
+    <h1>Create Sales Order</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div id="order_items">
+            <!-- Dynamic formset for order items -->
+            {{ form.products }}
+            {{ form.quantities }}
+            {{ form.rates }}
+            <!-- Add more fields as needed -->
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <script>
+    // Add JavaScript logic here to dynamically add/remove order item fields
+    </script>
+</body>
+</html>
