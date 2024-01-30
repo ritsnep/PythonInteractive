@@ -3,6 +3,16 @@
 {% block title %}
     blogpost
 {% endblock %}
+{% block blogactive %} active {% endblock %}
 {% block name %}
     Blogs Here
  {% endblock %} 
+ {% block body %}
+ <article class="container">
+    <h2 class="display-5 link-body-emphasis mb-1">{{post.title}}</h2>
+    <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p>
+
+    <p>{{post.content}}</p>
+    </article>
+    
+ {% endblock %}

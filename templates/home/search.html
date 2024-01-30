@@ -1,7 +1,7 @@
 {% extends 'home/base.html' %}
 
 {% block title %}
-bloghome
+blogresult
 {% endblock %}
 {% block blogactive %} active {% endblock %}
 {% block name %}
@@ -11,6 +11,7 @@ Blogs
 {% block body %}
 {% for post in allPosts %}
 <div class="container my-3">
+    <h2>Results are : </h2>
   <div class="card" >
     <img src="..." class="card-img-top" alt="...">
 
